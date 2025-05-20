@@ -18,3 +18,10 @@ class CommitSummary(BaseModel):
     date: str
     summary: str
     files_changed: List[str]
+
+class AskRequest(BaseModel):
+    repo_url: str
+    question: str
+
+class AskResponse(BaseModel):
+    answer: str
