@@ -19,7 +19,7 @@ export default function Home() {
     setError("");
     setAnalyzeMessage("");
     try {
-      const analyzeRes = await fetch("http://localhost:8000/analyze-github", {
+      const analyzeRes = await fetch("http://codebase-time-traveler-production.up.railway.app/analyze-github", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repo_url: repoUrl, max_commits: commitCount || 10 }),
@@ -43,7 +43,7 @@ export default function Home() {
     setAnswer("");
     setError("");
     try {
-      const askRes = await fetch("http://localhost:8000/ask-question", {
+      const askRes = await fetch("http://codebase-time-traveler-production.up.railway.app/ask-question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repo_url: repoUrl, question }),
