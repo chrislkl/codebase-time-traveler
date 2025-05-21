@@ -13,6 +13,7 @@ client = OpenAI(
 summary_cache: dict[str, CommitSummary] = {}
 
 def summarize_diff(diff: str, files: list[str]) -> str:
+    print("Sending diff to Groq...")
     prompt = f"""
 You are a helpful assistant. Summarize the following code changes.
 

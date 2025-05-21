@@ -32,6 +32,7 @@ def summarize(request: DiffRequest):
 
 @app.post("/analyze-github", response_model=list[CommitSummary])
 def analyze_github(request: GitHubRequest):
+    print("Received repo:", request.repo_url)
     try:
         if request.repo_url in repo_cache and os.path.exists(repo_cache[request.repo_url]):
             repo_path = repo_cache[request.repo_url]

@@ -31,7 +31,7 @@ def get_commit_summaries(repo_path: str, max_commits: int) -> list[CommitSummary
     summaries = []
     for line in output:
         commit_hash, date = line.split("|", 1)
-
+        print(f"Processing commit: {commit_hash}")
         if commit_hash in summary_cache:
             summaries.append(summary_cache[commit_hash])
             continue

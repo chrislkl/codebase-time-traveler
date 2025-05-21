@@ -11,7 +11,7 @@ class DiffSummary(BaseModel):
 
 class GitHubRequest(BaseModel):
     repo_url: str
-    max_commits: int = 10
+    max_commits: int = 20
 
 class CommitSummary(BaseModel):
     commit: str
