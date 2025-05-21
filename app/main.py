@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from app.models import DiffRequest, DiffSummary, GitHubRequest, CommitSummary, AskRequest, AskResponse
-from app.git_utils import get_git_diff, clone_github_repo, get_commit_summaries
-from app.summarizer import summarize_diff, ask_about_repo
+from models import DiffRequest, DiffSummary, GitHubRequest, CommitSummary, AskRequest, AskResponse
+from git_utils import get_git_diff, clone_github_repo, get_commit_summaries
+from summarizer import summarize_diff, ask_about_repo
 from fastapi.middleware.cors import CORSMiddleware
 import tempfile
 import shutil

@@ -1,6 +1,6 @@
 import subprocess
-from app.summarizer import summarize_diff, summary_cache
-from app.models import CommitSummary
+from summarizer import summarize_diff, summary_cache
+from models import CommitSummary
 
 def get_git_diff(repo_path: str, commit_range: str) -> tuple[str, list[str]]:
     try:

@@ -1,6 +1,6 @@
 import os
 from openai import OpenAI
-from app.models import CommitSummary
+from models import CommitSummary
 from dotenv import load_dotenv
 
 load_dotenv()
